@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Predictor</h1>
+    <form id="prediction-form" action="/predict" method="post">
+        <label for="eeg_id">EEG Id:</label><br>
+        <input type="text" id="eeg_id" name="eeg_id"><br>
+        <label for="seizure_vote">Seizure Vote:</label><br>
+        <input type="text" id="seizure_vote" name="seizure_vote"><br>
+        <label for="lpd_vote">LPD Vote:</label><br>
+        <input type="text" id="lpd_vote" name="lpd_vote"><br>
+        <label for="gpd_vote">GPD Vote:</label><br>
+        <input type="text" id="gpd_vote" name="gpd_vote"><br>
+        <label for="lrda_vote">LRDA Vote:</label><br>
+        <input type="text" id="lrda_vote" name="lrda_vote"><br>
+        <label for="grda_vote">GRDA Vote:</label><br>
+        <input type="text" id="grda_vote" name="grda_vote"><br>
+        <label for="other_vote">Other Vote:</label><br>
+        <input type="text" id="other_vote" name="other_vote"><br><br>
+        <input type="submit" value="Predict">
+        <br><br>
+    </form>
+    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#prediction-form').submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/predict',
+                    data: $('#prediction-form').serialize(),
+                    success: function (response) {
+                        $('#result').html('<p>Predicted Class: ' + 'LPD' + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

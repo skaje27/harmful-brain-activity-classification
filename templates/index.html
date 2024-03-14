@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="home">
+        <h1>Welcome to Harmful Brain Activity Classification</h1>
+        <br></br>
+        <img src="{{ url_for('static', filename='eeg.png') }}" alt="EEG Image">
+        <p>In the realm of healthcare, the monitoring and management of neurological disorders, particularly in critically ill patients, demand meticulous attention and timely intervention. Electroencephalography (EEG) stands as a pivotal tool in this domain, enabling the capture of intricate brain activity patterns essential for detecting and categorizing detrimental occurrences like seizures.</p>
+        <p>However, the current landscape of EEG analysis relies heavily on manual inspection by specialized neurologists, creating inefficiencies, susceptibility to fatigue-induced errors, and variability across different reviewers.</p>
+        <p>Our project seeks to catalyze a paradigm shift by automating EEG analysis, presenting a revolutionary solution poised to rapidly and accurately detect and classify seizures and other harmful brain activities in critically ill patients.</p>
+        <p>Leveraging a comprehensive dataset comprising EEG recordings, matched spectrograms, and detailed annotations, our initiative aims to provide a robust foundation for training advanced machine learning models.</p>
+        <p>By harnessing the power of automation and machine learning, we endeavor not only to streamline EEG analysis processes but also to significantly improve patient care outcomes in critical care settings.</p>
+        <a href="/predictor">
+            <button>Enter EEG Details</button>
+        </a>
+    </div>
+</body>
+</html>

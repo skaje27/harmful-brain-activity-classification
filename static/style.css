@@ -1,0 +1,69 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Home Page Styles */
+.home {
+    text-align: center;
+    padding: 50px;
+    background-color: #4e98e8;
+    color: #fff;
+}
+
+.home h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home p {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.home button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.home p {
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: justify; 
+}
+
+.home img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 20px; 
+}
+
+.predictor h1 {
+    color: #007bff; 
+}
+
+form input[type="submit"] {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
